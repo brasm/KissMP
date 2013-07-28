@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/np"
+        android:layout_width="800px"
+        android:layout_height="50px"
+        android:gravity="center_horizontal|fill_horizontal" >
+
+        <LinearLayout
+            android:id="@+id/pb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_margin="5px"
+            android:orientation="vertical" >
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="170px"
+                android:layout_height="wrap_content"
+                android:clickable="false" />
+
+            <TextView
+                android:id="@+id/librarySize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Library Size"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="490px"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/np_artist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="top|right|fill_horizontal"
+                android:text="Christpunchers"
+                android:textSize="15px" />
+
+            <TextView
+                android:id="@+id/np_song"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="bottom|left|fill_horizontal"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:maxLines="1"
+                android:text="Placeholder ...of Death"
+                android:textSize="25px"
+                android:typeface="monospace"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="130px"
+            android:layout_height="wrap_content"
+            android:gravity="right|bottom" >
+
+            <Button
+                android:id="@+id/btnToggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Toggle" />
+
+            <Button
+                android:id="@+id/btnNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Next" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <ListView
+                android:id="@+id/libBrowser"
+                android:layout_width="302dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.80" >
+            </ListView>
+
+            <ListView
+                android:id="@+id/playlistView"
+                android:layout_width="238dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.00" >
+
+            </ListView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
